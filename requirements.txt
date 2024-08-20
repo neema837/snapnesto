@@ -14,7 +14,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.4
 joblib==1.4.2
 MarkupSafe==2.1.5
-numpy @ file:///D:/bld/numpy_1687808486521/work
+numpy 
 opencv-contrib-python==4.10.0.84
 opencv-python==4.10.0.84
 packaging==24.1
