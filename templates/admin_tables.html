@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+<!-- Mirrored from extracoding.com/demo/html/adminise/basictables.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Adminise - Clean And Corporate Admin Panel Template</title>
+<!--// Stylesheets //-->
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet" media="screen" />
+<link href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!--// Javascript //-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- jQuery -->
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.accordion.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.custom-scrollbar.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+
+<script type="text/javascript" src="{% static 'assets/js/icheck.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/selectnav.min.js'%}"></script>
+
+
+</head>
+
+<body>
+<!-- Wrapper Start -->
+<div class="wrapper">
+	<div class="structure-row">
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+        	<div class="sidebar-in">
+                <!-- Sidebar Header Start -->
+                <header>
+                    <!-- Logo Start -->
+                    <div class="logo">
+                        <a href="dashboard1.html"><img src="assets/images/logo.png" alt="Adminise" /></a>
+                    </div>
+                    <!-- Logo End -->
+                    <!-- Toggle Button Start -->
+                    <a href="#" class="togglemenu">&nbsp;</a>
+                    <!-- Toggle Button End -->
+                    <div class="clearfix"></div>
+                </header>
+                <!-- Sidebar Header End -->
+                <!-- Sidebar Navigation Start -->
+                <nav class="navigation">
+                    <ul class="navi-acc" id="nav2">
+                        <li>
+                        <a href="dashboard" class="dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="upload_forms" class="forms">Upload Site Items</a>
+                        </li>
+                        
+                        <li>
+                            <a href="view_detail" class="ui-elements">View Uploaded Details</a>
+                        </li>
+
+                        <li>
+                            <a href="scan_upload" class="forms">Upload FaceScan Images</a>
+                        </li>
+
+                        <li>
+                            <a href="view_scan_images" class="ui-elements">View FaceScan Images</a>
+                        </li>
+                        
+                        <li>
+                            <a href="admin_gallery" class="layouts">Commertial Category</a>
+                        </li>
+                   
+                      
+                      
+                        <li>
+                            <a href="admin_logout" class="loginoptions">Logout</a>
+                        </li>
+                     
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+                <!-- Sidebar Navigation End -->
+                <!-- Shadow Start -->
+                <span class="shadows"></span>
+                <!-- Shadow End -->
+            </div>
+        </aside>
+        <!-- Sidebar End -->
+        <!-- Right Section Start -->
+        <div class="right-sec">
+            <!-- Right Section Header Start -->
+            <header>
+                <!-- User Section Start -->
+                <div class="user">
+                    <figure>
+                        <a href="#"><img src="assets/images/avatar1.jpg" alt="Adminise" /></a>
+                    </figure>
+                    <div class="welcome">
+                        <p>Welcome</p>
+                        <h5><a href="#">Stephen N. Arellano</a></h5>
+                    </div>
+                </div>
+          
+          
+                <!-- Header Top Navigation End -->
+                <div class="clearfix"></div>
+            </header>
+            <!-- Right Section Header End -->
+
+            <!-- Alert Section Start -->
+
+            {% if messages %}
+            <div class="container-liquid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sec-box">
+                            <header>
+                                <h2 class="heading">Alert</h2>
+                            </header>
+                            <a class="closethis">Close</a>
+            
+                            <div class="contents boxpadding">
+                                <a class="togglethis">Toggle</a>
+                                <div class="alert alert-success">
+                                    <strong>Well done!</strong>
+                                    {% for msg in messages %}
+                                    {{msg}}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Alert Section End -->
+
+
+            <!-- Content Section Start -->
+            <div class="container-liquid">
+                     <div class="content-section">
+                    <div class="row">
+
+                    <!--Slider Banner Starts-->
+                        <div class="col-xs-12">
+                            <div class="sec-box">
+                                <header>
+                                    <h2 class="heading">Slider Banner Images </h2>
+                                </header>
+                                <div class="contents">
+                                    <section>
+                                        <table class="table  table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Image </th>
+                                                    <th>Update</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for slide in sliders %}
+
+                                                <tr>
+                                                    <td>{{forloop.counter}}</td>
+                                                    <td><a href="{{slide.slider_image.url}}" >{{slide.slider_image.name}}</a></td>
+
+                                                    <td><a href="{% url "slider_edit" slide.id %}" class="btn btn-info style3" data-toggle="modal">
+                                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                    </a></td>
+                                                    
+                                                    <td><a href="{% url "slider_delete" slide.id %}" class="btn btn-danger style3" data-toggle="modal"
+                                                         data-target="">
+                                                        <span class="glyphicon glyphicon-trash" aria-hidden="true" ></span>
+                                                    </a></td>
+                                                </tr>
+
+                                                    <!-- Modal -->
+                                                  
+
+                                                {% endfor %}
+
+
+                                            </tbody>
+                                        </table>
+ 
+                                        
+
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    <!--Slider Banner Ends-->
+
+                    <!--Other Services Starts-->
+                       <div class="col-xs-12">
+                            <div class="sec-box">
+                                <header>
+                                    <h2 class="heading">Other Services</h2>
+                                </header>
+                                <div class="contents">
+                                    <section>
+                                        <table class="table table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Description</th>
+                                                    <th>Image</th>
+                                                    <th>Update</th>
+                                                    <th>Delete</th
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for spec in specs %}
+                                                
+                                                <tr>
+                                                    <td>{{forloop.counter}}</td>
+                                                    <td>{{spec.spec_name}}</td>
+                                                    <td>{{spec.spec_description}}</td>
+                                                    <td><a href="{{spec.spec_image.url}}">{{spec.spec_image}}</a></td>
+
+                                                    <td><a href="{% url "service_edit" spec.id %}" class="btn btn-info style3">
+                                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                    </a></td> 
+                                                    
+                                                    <td><a href="{% url "service_delete" spec.id %}" class="btn btn-danger style3">
+                                                        <span class="glyphicon glyphicon-trash" aria-hidden="true" ></span>
+                                                    </a></td>
+                                                </tr>
+
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    <!--Other Services Ends-->
+
+                    <!--Commertial Category Starts-->
+                        <div class="col-xs-12">
+                                <div class="sec-box">
+                                    <header>
+                                        <h2 class="heading">Commertial Categorys</h2>
+                                    </header>
+                                    <div class="contents">
+                                        <section>
+                                            <table class="table table-condensed">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>
+                                                        <th>Update</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for cat  in com_categs %}
+                                                    
+                                                    <tr>
+                                                        <td>{{forloop.counter}}</td>
+                                                        <td>{{cat.name}}</td>
+
+                                                        <td><a href="{{cat.commercial_categ_image.url}}"
+                                                            >{{cat.commercial_categ_image.url}}</a></td>
+
+                                                            <td><button class="btn btn-info style3">
+                                                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                            </button></td>
+                                                            
+                                                            <td><button class="btn btn-danger style3">
+                                                                <span class="glyphicon glyphicon-trash" aria-hidden="true" ></span>
+                                                            </button></td>
+                                                    </tr>
+
+                                                            {% endfor %}
+
+                                                </tbody>
+                                            </table>
+                                        </section>
+                                    </div>
+                                </div>
+                        </div>
+                    <!--Commertial Category Ends-->
+                    
+                    </div>
+                    <!-- Row End -->
+                </div>
+            </div>
+            <!-- Content Section End -->
+        </div>
+        <!-- Right Section End -->
+    </div>
+</div>
+<!-- Wrapper End -->
+
+</body>
+
+<!-- Mirrored from extracoding.com/demo/html/adminise/basictables.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:26 GMT -->
+</html>

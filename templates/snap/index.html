@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<!-- Mirrored from livewp.site/html/etudes/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 08:08:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple_icons_57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple_icons_72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple_icons_114x114.png">
+<title>Etudes | Premium Photo Theme</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/theme.css'%}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/custom.css'%}" type="text/css" media="all" />
+</head>
+<body class="page_with_abs_header">
+	<div class="main_header">
+        <div class="header_parent_wrap">
+            <header>
+                <div class="logo_sect">
+                    <a href="index-2.html" class="logo">
+                        <img src="{% static 'img/logo_retina.png'%}" class="dark_logo" alt="" />
+                        <img src="{% static 'img/logo_white_retina.png'%}" class="white_logo" alt="" />
+                    </a>
+                  
+                </div>
+                <a href="{% url "face_scan" %}" class="shortcode_button btn_small btn_type1" 
+                style="margin-left:180px;">Face Scan</a>
+                
+                <div class="fright">
+
+                    <nav>
+                        
+                        <ul class="menu">
+                            
+                            <li class="current-menu-parent menu-item-has-children"><a href="javascript:void(0);">Home</a>
+                                {% comment %} <div class="sub-nav">
+                                    <ul class="sub-menu">
+                                   
+                                    </ul>
+                                </div> {% endcomment %}
+                            </li>
+                            <li class="menu-item-has-children"><a href="">About Us</a></li>
+                            <li class="menu-item-has-children"><a href="">Contact</a></li>
+
+                      
+                        </ul>
+                    </nav>
+                    <!-- lang_selector -->
+                 
+                    <!-- //lang_selector -->
+                    <!-- top_search -->
+             
+                    <!-- //top_search -->
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </header>
+        </div>
+    </div>
+    <div class="header_holder"></div>
+    <div class="mobile_menu_wrapper"></div>
+    
+    <div class="wrapper">
+    	<div class="container">
+        	<div class="content_block row no-sidebar">
+            	<div class="fl-container">
+                	<div class="posts-block">
+                        <div class="contentarea">
+
+                            <div class="fw_block wall_wrap mb74">
+                                <div class="flex_fullscreen">
+                                    <div class="flexslider">
+                                        <ul class="slides">
+                                        {% for img in slider %}
+                                            <li>
+                                                <img src="{{img.slider_image.url}}" class="slide_bg" alt="" />
+                                                <div class="container absolute_container dark_bg">
+                                                    <div class="bg_title">
+                                                       <h1>Snap NEsto </h1>
+                                                        <p>Upload Your Selfie & Identify Images</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb43">
+                                    <div class="bg_title">
+                                        <h2>Commercials</h2
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb60">
+                                    <div class="sorting_block list-of-images image-grid items3" id="list">
+
+                                    {% for img in comcateg_img %}
+
+                                        <div class="portfolio_item element fashion portrait">
+                                            <div class="item_padding">
+                                                <div class="img_block">
+                                                    <img src="{{img.commercial_categ_image.url}}" alt="" />
+                                                    <span class="gallery_overlay"></span>
+                                                    <a href="{% url "com_img" img.id %}" style="color:white" class="item_link">View Portfolio Post</a>
+                                                    <div class="item_title_block">
+                                                        <div class="item_title">
+                                                            <a href="{% url "com_img" img.id %}"><h2 style="color:white">{{img.name}}</h2></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                       
+
+                                      
+
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="text-center"><a href="#" class="load_more_works shortcode_button btn_large btn_type1">View more</a></div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-sm-12 module_cont pb43">
+                                    <div class="bg_title">
+                                        <h2>Our specialities</h2>
+                                        <p>Curabitur nec justo id sapien hendrerit rhoncus posuere eu sem. Pellentesque habitant morbi<br>tristique senectus et netus et malesuada fames ac turpis egestas. Nunc vel facilisis arcu.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row info_module">
+                            {% for sp in spec %}
+
+                                <div class="col-sm-4 module_cont">
+                                    <a href="javascript:void(0);">
+                                        <img src="{{sp.spec_image.url}}" alt="" />
+                                        <h5>{{sp.spec_name}}</h5>
+                                        <p>{{sp.spec_description}}</p>
+                                    </a>
+                                </div>
+
+                            {% endfor %}
+
+                               
+                            </div>
+
+                        
+
+                          
+                           
+
+                          
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Instagram -->
+    <div class="instagram_module_title">
+        <h4>Follow us on instagram</h4>
+    </div>
+    <div id="instagram_module"></div>
+    <!-- //Instagram -->
+    
+    <div class="footer">
+    	<div class="pre_footer">
+        	<div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="sidepanel widget_gt3_contacts">
+                            <h6 class="title">Contact Info</h6>
+                            <div class="widget_contacts">
+                                <div class="widget_contacts_block">
+                                    <div class="widget_contacts_name">Address:</div>
+                                    <div class="widget_contacts_value">121 King Street, Melbourne Victoria 3000</div>
+                                </div>
+                                <div class="widget_contacts_block">
+                                    <div class="widget_contacts_name">Phone:</div>
+                                    <div class="widget_contacts_value">
+                                        +1 (800) 456 37 96 - Office
+                                    </div>
+                                </div>
+                                <div class="widget_contacts_block">
+                                    <div class="widget_contacts_name">Email:</div>
+                                    <div class="widget_contacts_value"><a href="mailto:#">email@gt3themes.com</a></div>
+                                </div>
+                                <div class="widget_contacts_block">
+                                    <div class="widget_contacts_name">Follow Us:</div>
+                                    <div class="widget_contacts_value">
+                                        <ul class="social_icons">
+                                            <li><a title="Facebook" href="javascript:void(0);"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a title="Pinterest" href="javascript:void(0);"><i class="fa fa-pinterest-square"></i></a></li>
+                                            <li><a title="Twitter" href="javascript:void(0);"><i class="fa fa-twitter-square"></i></a></li>
+                                            <li><a title="Google+" href="javascript:void(0);"><i class="fa fa-google-plus-square"></i></a></li>
+                                            <li><a title="Behance" href="javascript:void(0);"><i class="fa fa-behance-square"></i></a></li>
+                                            <li><a title="LinkedIn" href="javascript:void(0);"><i class="fa fa-linkedin-square"></i></a></li>
+                                            <li><a title="Instagram" href="javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        	
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="sidepanel widget_flickr">
+                            <h6 class="title">Gallery</h6>
+                            <div class="flickr_widget_wrapper"><script src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=t&amp;layout=x&amp;source=user&amp;user=91205275@N03"></script></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="sidepanel widget_posts">
+                            <h6 class="title">Recent Posts</h6>
+                            <ul class="recent_posts">
+                                <li>
+                                    <div class="recent_posts_content">
+                                        <a href="javascript:void(0);">Standard gallery post</a>
+                                        <div class="recent_posts_info">
+                                            <span>June 09, 2022</span>
+                                            <span>by <a href="javascript:void(0);">Author</a></span>
+                                            <span><a href="javascript:void(0);">3 Comments</a></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent_posts_content">
+                                        <a href="javascript:void(0);">Post with couple photos inside</a>
+                                        <div class="recent_posts_info">
+                                            <span>June 08, 2022</span>
+                                            <span>by <a href="javascript:void(0);">Author</a></span>
+                                            <span><a href="javascript:void(0);">0 Comments</a></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="recent_posts_content">
+                                        <a href="javascript:void(0);">Smart quote post</a>
+                                        <div class="recent_posts_info">
+                                            <span>June 06, 2022</span>
+                                            <span>by <a href="javascript:void(0);">Author</a></span>
+                                            <span><a href="javascript:void(0);">2 Comments</a></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="sidepanel widget_text">
+                            <h6 class="title">Newsletter signup</h6>
+                            <div class="textwidget">
+                                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudian.</p>
+                                <form id="mc_signup_form" action="javascript:void(0);" method="post">
+                                    <input type="text" placeholder="Your Email" value="" name="signup">
+                                    <div class="submit_wrap"><input type="submit" value="Subscribe" /></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer_bottom">
+        	<div class="container">
+                <div class="copyright">Copyright &copy; 2022 Etudes. All Rights Reserved.</div>
+                <div class="foot_info_block">Premium Photo Theme by <a href="http://www.gt3themes.com/">GT3themes.com</a></div>
+                <div class="clear"></div>
+        	</div>
+        </div>
+    </div>
+
+    <!-- SideArea -->
+    <div class="sidebar_area">
+        <div class="sidebar_area_head">
+            <div class="logo_sect">
+                <a href="index-2.html" class="logo">
+                    <img src="{% static 'img/logo_white_retina.png'%}" alt="" />
+                </a>
+            </div>
+            {% comment %} <div class="close_sidebar_area">
+                <a href="" class="shortcode_button btn_large btn_type1">Face Scan</a>
+            </div> {% endcomment %}
+        </div>
+        <div class="scroll_pane_wrap">
+
+            <div class="sidepanel widget_flickr">
+                <div class="flickr_widget_wrapper"><script src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=m&amp;layout=x&amp;source=user&amp;user=91205275@N03"></script></div>
+            </div>
+
+            <div class="sidepanel widget_text">
+                <h6 class="title">About Us</h6>
+                <div class="textwidget">
+                    <p>Vestibulum interdum laoreet risus, id rutrum libero. Ut nec condim lacus. Praesent sollicitudin nibh nisl, at finibus tortor placerat nec. Pellentesque sed magna ac nibh sagittis facilisis. Quisque in odio sit amet erat tempor ornare iaculis eget lacus. Praesent hendrerit elit vitae lorem iaculis posuere.</p>
+                </div>
+            </div>
+
+            <div class="sidepanel widget_gt3_contacts">
+                <h6 class="title">Contact Info</h6>
+                <div class="widget_contacts">
+                    <div class="widget_contacts_block">
+                        <div class="widget_contacts_name">Address:</div>
+                        <div class="widget_contacts_value">121 King Street, Melbourne Victoria 3000</div>
+                    </div>
+                    <div class="widget_contacts_block">
+                        <div class="widget_contacts_name">Phone:</div>
+                        <div class="widget_contacts_value">
+                            +1 (800) 456 37 96 - Office
+                        </div>
+                    </div>
+                    <div class="widget_contacts_block">
+                        <div class="widget_contacts_name">Email:</div>
+                        <div class="widget_contacts_value"><a href="mailto:#">email@gt3themes.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidepanel widget_text">
+                <h6 class="title">Follow &amp; share</h6>
+                <div class="textwidget">
+                    <ul class="social_icons">
+                        <li><a title="Facebook" href="javascript:void(0);"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a title="Pinterest" href="javascript:void(0);"><i class="fa fa-pinterest-square"></i></a></li>
+                        <li><a title="Twitter" href="javascript:void(0);"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a title="Google+" href="javascript:void(0);"><i class="fa fa-google-plus-square"></i></a></li>
+                        <li><a title="Behance" href="javascript:void(0);"><i class="fa fa-behance-square"></i></a></li>
+                        <li><a title="LinkedIn" href="javascript:void(0);"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a title="Instagram" href="javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright"><span>Copyright &copy; 2022 Etudes. All Rights Reserved.</span></div>
+    </div>
+    <!-- //SideArea -->
+
+    <a href="#" class="back2top" title="Back To Top">Back to Top</a>
+
+    <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/modules.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/theme.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.isotope.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/sorting.js'%}"></script>
+  
+</body>
+
+<!-- Mirrored from livewp.site/html/etudes/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 08:08:46 GMT -->
+</html>

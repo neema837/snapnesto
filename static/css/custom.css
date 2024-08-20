@@ -1,0 +1,405 @@
+/* Template Options */
+
+/*
+	--//-- 1. Color Options --//--
+	- Template color - e47839;
+	- Body Background - ffffff;
+	- Main content color - 434449;
+	- Headings color - 232429;
+	- Header Background - ffffff;
+	- Header Text Color (Menu) - 434449;
+	- Submenu Background - 232429;
+	- Submenu Text Color - 737479;
+	- Footer (SideArea) Background - 232429;
+	- Footer (SideArea) Text Color - 737479;
+
+	--//-- 2. Theme Font --//--
+	- Main font - PT Sans;
+	- Headings font - Roboto;
+	- Content font weight - 400;
+	- Content font size - 15px;
+	- Content line height - 22px;
+*/
+
+h1, h1 span, h1 a,
+h2, h2 span, h2 a,
+h3, h3 span, h3 a,
+h4, h4 span, h4 a,
+h5, h5 span, h5 a,
+.countdown-amount,
+.strip_template .strip-item a span,
+.column1 .item_title a {
+	font-family: 'Roboto', sans-serif; /* Headings font */
+}
+
+body,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea,
+.comment-form p.form-allowed-tags code,
+h6, h6 span, h6 a,
+.price_item_cost h1,
+.price_item_cost h1 span,
+.fs_title_wrapper h3 {
+	font-family: 'PT Sans', sans-serif; /* Main font */
+}
+
+body {
+	color:#434449; /* Main content color */
+	line-height:22px; /* Content line height */
+	font-size:15px; /* Content font size */
+	font-weight:400; /* Content font weight */
+	background:#ffffff; /* Body Background */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	color:#434449; /* Main content color */
+}
+
+a {
+	color:#e47839; /* Template color */
+}
+
+a:hover,
+a:focus {
+	color:#434449; /* Main content color */
+}
+
+::selection {
+	background:#e47839; /* Template color */
+	color:#ffffff;
+}
+
+::-moz-selection {
+	background:#e47839; /* Template color */
+	color:#ffffff;
+}
+
+.color {
+	color:#e47839 !important; /* Template color */
+}
+
+.colored_bg {
+    background-color:#e47839;  /* Template color */
+}
+
+h1, h1 span, h1 a,
+h2, h2 span, h2 a,
+h3, h3 span, h3 a,
+h4, h4 span, h4 a,
+h5, h5 span, h5 a,
+h6, h6 span, h6 a,
+.countdown-amount,
+.countdown-period,
+.diagram_item .chart,
+.blog_post_title a:hover,
+.blog_content p,
+.item_title a,
+.shortcode_tab_item_title,
+.module_iconboxes_grid.type2 .icon_title_wrap .iconbox_title {
+	color:#232429; /* Headings color */
+}
+
+.blog_post_title:before,
+.item_title a:before {
+	background: #232429; /* Headings color */
+}
+
+.highlighted_colored {
+	background:#e47839;  /* Template color */
+}
+
+blockquote:before,
+.learn_more:after,
+.learn_more:before,
+.ww_footer_cats:before {
+	background:#434449; /* Main content color */
+}
+
+blockquote.type2:before,
+.learn_more:hover:after,
+.learn_more:hover:before {
+	background:#e47839;  /* Template color */
+}
+
+.footer,
+.sidebar_area {
+	background: #232429; /* Footer (SideArea) Background */
+	color: #737479; /* Footer (SideArea) Text Color */
+}
+
+.pre_footer .widget_contacts ul.social_icons li a {
+	color: #737479; /* Footer (SideArea) Text Color */
+}
+
+.pre_footer .widget_contacts ul.social_icons li a:hover {
+	color: #e47839;  /* Template color */
+}
+
+.footer a,
+.sidebar_area a,
+.footer h6,
+.sidebar_area h6 {
+	color: #737479; /* Footer (SideArea) Text Color */
+}
+
+.footer a:hover,
+.sidebar_area a:hover {
+	color: #e47839;  /* Template color */
+}
+
+/* Logo Size */
+.logo_sect img {
+	width:108px;
+	height:26px;
+}
+
+.main_header {
+	background: #ffffff; /* Header Background */
+}
+
+.fixed_show.small_sticky .main_header,
+.page_with_abs_header.fixed_show.small_sticky .main_header {
+	background: rgba(255,255,255, 0.9); /* Header Background (rgba) */
+}
+
+.page_with_abs_header .main_header,
+.page_with_abs_header.fixed_show .main_header {
+	background: rgba(255,255,255, 0); /* Header Background (rgba) */
+}
+
+header nav ul.menu > li > a,
+.lang_selector .language_list li,
+.lang_selector a,
+.top_search form input[type="text"] {
+	color: #434449; /* Header Text Color (Menu) */
+}
+
+header nav ul.menu > li > a:before,
+.lang_selector:before {
+	background: #434449; /* Header Text Color (Menu) */
+}
+
+header nav ul.menu .sub-nav,
+header nav ul.menu .sub-nav:after {
+	background: #232429; /* Submenu Background */
+}
+
+header nav ul.sub-menu li a {
+	color: #737479; /* Submenu Text Color */
+}
+
+.top_search.ct-search-open form input[type="text"]:focus::-webkit-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.top_search.ct-search-open form input[type="text"]:focus:-moz-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.top_search.ct-search-open form input[type="text"]:focus::-moz-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.top_search.ct-search-open form input[type="text"]:focus:-ms-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.top_search.ct-search-open form input[type="text"]:-ms-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+/* Transparent Sticky Header */
+.page_with_abs_header.small_sticky header nav ul.menu > li > a,
+.page_with_abs_header.small_sticky .lang_selector .language_list li,
+.page_with_abs_header.small_sticky .lang_selector a {
+	color: #434449; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky header nav ul.menu > li > a:before,
+.page_with_abs_header.small_sticky .lang_selector:before {
+	background: #434449; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search.ct-search-open form input[type="text"]:focus::-webkit-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search.ct-search-open form input[type="text"]:focus:-moz-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search.ct-search-open form input[type="text"]:focus::-moz-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search.ct-search-open form input[type="text"]:focus:-ms-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search.ct-search-open form input[type="text"]:-ms-input-placeholder {
+	color: #434449 !important; /* Header Text Color (Menu) */
+}
+
+.page_with_abs_header.small_sticky .top_search form input[type="text"] {
+	color: #434449; /* Header Text Color (Menu) */
+}
+
+.back2top:hover {
+	background:#e47839; /* Template color */
+}
+
+ul.social_icons li a,
+.filter_navigation ul li ul li a {
+	color: #434449; /* Main content color */
+}
+
+.module_iconboxes_grid.type2 .shortcode_iconbox .iconbox_body,
+.module_iconboxes_grid.type2 .shortcode_iconbox .iconbox_body p {
+	color: #434449 !important; /* Main content color */
+}
+
+.filter_navigation ul li ul li a:before {
+	background: #434449; /* Main content color */
+}
+
+.shortcode_button.btn_type1 {
+	background: #e47839;  /* Template color */
+	border-color:#e47839;  /* Template color */
+}
+
+.shortcode_button.btn_type2 {
+	border-color:#434449; /* Main content color */
+	color: #434449; /* Main content color */
+}
+
+.shortcode_button:hover {
+	border-color: #434449; /* Main content color */
+	background: #434449; /* Main content color */
+}
+
+h6.shortcode_accordion_item_title,
+h6.shortcode_toggles_item_title {
+	color: #434449; /* Main content color */
+}
+
+h6.shortcode_accordion_item_title .ico:before,
+h6.shortcode_accordion_item_title .ico:after,
+h6.shortcode_toggles_item_title .ico:before,
+h6.shortcode_toggles_item_title .ico:after,
+.module_iconboxes_grid.type2 .icon_title_wrap:before {
+	background: #434449; /* Main content color */
+}
+
+.widget_nav_menu ul li a,
+.widget_archive ul li a,
+.widget_pages ul li a,
+.widget_categories ul li a,
+.widget_recent_entries ul li a,
+.widget_meta ul li a,
+.recent_posts_content > a,
+.widget_contacts.type1 .widget_contacts_value > a,
+.widget_contacts.type2 a,
+.learn_more,
+.ww_footer_cats a,
+.ww_footer_cats a:after {
+	color: #434449; /* Main content color */
+}
+
+.sidepanel a:hover,
+.sidepanel li.current-menu-item a,
+.widget_contacts.type1 .widget_contacts_value > a:hover,
+.stat_count,
+.widget_contacts.type2 a:hover,
+.learn_more:hover,
+a:hover .iconbox_title,
+.list_of_works ul li h6 a:hover,
+.popular .price_item_title h6,
+.listing_meta a:hover,
+.ww_footer_cats a:hover,
+.item_title_block > a:hover,
+.item_title a:hover,
+.active_hover .item_title a,
+.info_module a:hover h5,
+.img_block .item_title_block .item_title a:hover {
+	color:#e47839;  /* Template color */
+}
+
+.tagcloud a,
+.shortcode_iconbox .iconbox_body,
+.shortcode_iconbox .iconbox_body p,
+.info_module a p {
+	color: #434449 !important; /* Main content color */
+}
+
+.coming_soon_form input[type="button"],
+.coming_soon_form input[type="reset"],
+.coming_soon_form input[type="submit"] {
+	background: #e47839;  /* Template color */
+	border-color: #e47839;  /* Template color */
+}
+
+.instagram_module_title:after,
+.comment-reply-link:after {
+	background: #434449; /* Main content color */
+}
+
+.shortcode_tab_item_title {
+	background:#ffffff; /* Body Background */
+}
+
+.module_iconboxes_grid.type2 .iconbox_wrapper .ico,
+.post_share_block .fleft a {
+	background: #e47839;  /* Template color */
+}
+
+.pagerblock li a,
+.pagerblock li span,
+.comment-reply-link {
+	color: #434449; /* Main content color */
+}
+
+.pagerblock li a:hover,
+.pagerblock li a:focus,
+.single_meta .gallery_likes:hover,
+.single_meta .gallery_likes.already_liked,
+.comment_info a:hover {
+	color: #e47839;  /* Template color */
+}
+
+/* Mobile Menu */
+.toggle-inner,
+.toggle-inner:before,
+.toggle-inner:after {
+	background-color: #232429; /* Headings color */
+}
+.mobile_menu_wrapper {
+	background:#232429; /* Footer (SideArea) Background */
+}
+.mobile_menu_wrapper a {
+	color:#737479; /* Footer (SideArea) Text Color */
+}
+.mobile_menu_wrapper a:hover,
+.mobile_menu_wrapper .current-menu-parent > a,
+.mobile_menu_wrapper .current-menu-ancestor > a,
+.mobile_menu_wrapper .current-menu-item > a {
+	color:#e47839;  /* Template color */
+}
+
+.preloader_block {
+	background:#ffffff; /* Body Background */
+}
+
+.site_preloader .dot:after,
+.site_preloader .dot .first {
+	background: #434449; /* Main content color */
+}
+
+.site_preloader .dot .first {
+	background: #434449; /* Main content color */
+}

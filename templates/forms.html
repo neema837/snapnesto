@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+<!-- Mirrored from extracoding.com/demo/html/adminise/basictables.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Adminise - Clean And Corporate Admin Panel Template</title>
+<!--// Stylesheets //-->
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet" media="screen" />
+<link href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!--// Javascript //-->
+<script type="text/javascript" src="{% static 'assets/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.accordion.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.custom-scrollbar.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/icheck.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/selectnav.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/functions.js'%}"></script>
+<!--[if lt IE 9]>
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- Wrapper Start -->
+<div class="wrapper">
+	<div class="structure-row">
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+        	<div class="sidebar-in">
+                <!-- Sidebar Header Start -->
+                <header>
+                    <!-- Logo Start -->
+                    <div class="logo">
+                        <a href="dashboard1.html"><img src="assets/images/logo.png" alt="Adminise" /></a>
+                    </div>
+                    <!-- Logo End -->
+                    <!-- Toggle Button Start -->
+                    <a href="#" class="togglemenu">&nbsp;</a>
+                    <!-- Toggle Button End -->
+                    <div class="clearfix"></div>
+                </header>
+                <!-- Sidebar Header End -->
+                <!-- Sidebar Navigation Start -->
+                <nav class="navigation">
+                    <ul class="navi-acc" id="nav2">
+                        <li>
+                        <a href="dashboard" class="dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="upload_forms" class="forms">Upload Site Items</a>
+                        </li>
+                        
+                        <li>
+                            <a href="view_detail" class="ui-elements">View Uploaded Details</a>
+                        </li>
+
+                        <li>
+                            <a href="scan_upload" class="forms">Upload FaceScan Images</a>
+                        </li>
+
+                        <li>
+                            <a href="view_scan_images" class="ui-elements">View FaceScan Images</a>
+                        </li>
+                        
+                        <li>
+                            <a href="admin_gallery" class="layouts">Commertial Category</a>
+                        </li>
+
+                        <li>
+                            <a href="admin_logout" class="loginoptions">Logout</a>
+                        </li>
+                     
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+                <!-- Sidebar Navigation End -->
+                <!-- Shadow Start -->
+                <span class="shadows"></span>
+                <!-- Shadow End -->
+            </div>
+        </aside>
+        <!-- Sidebar End -->
+        <!-- Right Section Start -->
+        <div class="right-sec">
+            <!-- Right Section Header Start -->
+            <header>
+                <!-- User Section Start -->
+                <div class="user">
+                    <figure>
+                        <a href="#"><img src="assets/images/avatar1.jpg" alt="Adminise" /></a>
+                    </figure>
+                    <div class="welcome">
+                        <p>Welcome</p>
+                        <h5><a href="#">Stephen N. Arellano</a></h5>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </header>
+            <!-- Right Section Header End -->
+
+            <!-- Alert Section Start -->
+
+            {% if messages %}
+            <div class="container-liquid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sec-box">
+                            <header>
+                                <h2 class="heading">Alert</h2>
+                            </header>
+                            <a class="closethis">Close</a>
+            
+                            <div class="contents boxpadding">
+                                <a class="togglethis">Toggle</a>
+                                <div class="alert alert-success">
+                                    <strong>Well done!</strong>
+                                    {% for msg in messages %}
+                                    {{msg}}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Alert Section End -->
+
+
+            <!-- Content Section Start -->
+            <div class="content-section">
+                <div class="container-liquid">
+                    <div class="row">
+                        <!--- Upload Commercial Category Start -->
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <header>
+                                    <h2 class="heading">Upload Commercial Category</h2>
+                                </header>
+                                <div class="contents">
+                                    <a class="togglethis">Toggle</a>
+                                    <section>
+                                        <div class="table-box">
+                                        <form method="post" action="up_comcateg" enctype= 'multipart/form-data'>
+                                            {% csrf_token %}
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-4">Description</th>
+                                                        <th class="col-md-8">Form Elements</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                             
+                                                 <tr>
+                                                        <td class="col-md-4">Category Name</td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" name="name" class="form-control">
+                                                        </td>
+                                                    </tr> 
+                                                 
+                                                    <tr>
+                                                        <td class="col-md-4">Category Image</td>
+                                                        <td class="col-md-8"><input type="file" name="img"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-4"></td>
+                                                        <td class="col-md-8"><button  class="btn btn-primary style3" >Upload Content</button>
+                                                        </td>
+                                                    </tr>
+                                                
+                                              
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                        </div>
+
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Upload Commercial Category End -->
+
+                        <!--- Upload Commercial Images Start -->
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Upload Commercial images</h2>
+                                </header>
+                                <div class="contents">
+                                    <a class="togglethis">Toggle</a>
+                                    <section>
+                                        <div class="table-box">
+                                            <form method="POST" enctype="multipart/form-data" action="upload_comimages">
+                                                {% csrf_token %}
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-4">Description</th>
+                                                        <th class="col-md-8">Form Elements</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                             
+                                                 <tr>
+                                                        <td class="col-md-4">Select Commetial Category</td>
+                                                        <td class="col-md-8">
+                                                            
+                                                            <select name="category_id" class="form-control">
+                                                                <option>Select Option</option>
+
+                                                                {% for cat in categ %}
+                                                                <option  value="{{cat.id}}">{{cat.name}}</option>
+                                                                {% endfor %}
+
+                                                            </select>
+                                                        </td>
+                                                    </tr> 
+                                                   <tr>
+                                                        <td class="col-md-4">commertial Images</td>
+                                                        <td class="col-md-8"><input name="images" type="file" multiple></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-4"></td>
+                                                        <td class="col-md-8"><button  class="btn btn-primary style3" >Upload Content</button>
+                                                        </td>
+                                                    </tr>
+                                                
+                                              
+                                                </tbody>
+                                            </table>
+                                            </form>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Upload Commercial Images End -->
+
+                        <!--- Upload Slider Banner Start -->
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Upload Slider Banner</h2>
+                                </header>
+                                <div class="contents">
+                                    <a class="togglethis">Toggle</a>
+                                    <section class="">
+                                        <div class="table-box">
+                                            <form method="POST" enctype="multipart/form-data" action="upload_sliderimg">
+                                                {% csrf_token %}
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-4">Description</th>
+                                                        <th class="col-md-8">Form Elements</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                             
+                                                 <tr>
+                                                        <td class="col-md-6">3 Slider Images Needed</td>
+                                                        <td class="col-md-8">
+                                                         
+                                                        </td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td class="col-md-4">Slider Images</td>
+                                                        <td class="col-md-8"><input name="slider_img" type="file" multiple></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-4"></td>
+                                                        <td class="col-md-8"><button  class="btn btn-primary style3" >Upload Content</button>
+                                                        </td>
+                                                    </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                            </form>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Upload Slider Banner End -->
+
+                        <!--- Upload Services Start -->
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Upload Other Services</h2>
+                                </header>
+                                <div class="contents">
+                                    <a class="togglethis">Toggle</a>
+                                    <section >
+                                        <div class="table-box">
+                                        <form method="POST" enctype="multipart/form-data" action="{% url "upload_services" %}">
+                                                {% csrf_token %}
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-4">Description</th>
+                                                        <th class="col-md-8">Form Elements</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="col-md-4">Service Name </td>
+                                                        <td class="col-md-8"><input name="service_name" class="form-control" type="txt"></td>
+                                                    </tr>
+                                                 <tr>
+                                                        <td class="col-md-4">Service Description</td>
+                                                        <td class="col-md-8">
+                                                            <textarea rows="3" name="service_des" class="form-control">
+
+                                                            </textarea>
+                                                        </td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td class="col-md-4">commertial Images</td>
+                                                        <td class="col-md-8"><input name="service_img" type="file"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-4"></td>
+                                                        <td class="col-md-8"><button class="btn btn-primary style3">Upload Content</button>
+                                                        </td>
+                                                    </tr>
+                                                
+                                              
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Upload Services End -->
+
+{% comment %}                     
+                        <div class="col-xs-12">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Contextual Classes</h2>
+                                </header>
+                                <div class="contents">
+                                    <a class="togglethis">Toggle</a>
+                                    <section>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Column heading</th>
+                                                    <th>Column heading</th>
+                                                    <th>Column heading</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="active">
+                                                    <td>1</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>2</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                </tr>
+                                                <tr class="warning">
+                                                    <td>3</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                </tr>
+                                                <tr class="danger">
+                                                    <td>4</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                    <td>Column content</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                    <!-- Row End -->
+                </div>
+            </div>
+            <!-- Content Section End -->
+        </div>
+        <!-- Right Section End -->
+    </div>
+</div>
+<!-- Wrapper End -->
+</body>
+
+<!-- Mirrored from extracoding.com/demo/html/adminise/basictables.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:26 GMT -->
+</html>

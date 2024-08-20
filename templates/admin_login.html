@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+
+<!-- Mirrored from extracoding.com/demo/html/adminise/login1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:29 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Adminise - Clean And Corporate Admin Panel Template</title>
+<!--// Stylesheets //-->
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet" media="screen" />
+<link href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script type="text/javascript" src="{% static 'assets/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/icheck.min.js'%}"></script>
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- Wrapper Start -->
+<div class="loginwrapper">
+	<span class="circle"></span>
+	<div class="loginone">
+    	<header>
+        	<img src="{% static 'assets/images/logo.png'%}" alt="" />
+            <p>Enter your credentials to login to your account</p>
+        </header>
+        <form method="post">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+        
+            <input type="submit" class="btn btn-primary style2" value="Sign In" />
+        </form>
+        <footer>
+        	
+            <div class="clear"></div>
+        </footer>
+    </div>
+</div>
+<!-- Wrapper End -->
+</body>
+
+<!-- Mirrored from extracoding.com/demo/html/adminise/login1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:29 GMT -->
+</html>

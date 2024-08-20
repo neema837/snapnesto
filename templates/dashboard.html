@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+{% load static %}
+<!-- Mirrored from extracoding.com/demo/html/adminise/dashboard1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:22 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Adminise - Clean And Corporate Admin Panel Template</title>
+<!--// Stylesheets //-->
+<link href="{% static 'assets/css/style.css'%}" rel="stylesheet" media="screen" />
+<link href="{% static 'assets/css/bootstrap.css'%}" rel="stylesheet" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!--// Javascript //-->
+
+<script type="text/javascript" src="{% static 'assets/js/jquery.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.accordion.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.custom-scrollbar.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/icheck.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/selectnav.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'assets/js/functions.js'%}"></script>
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- Wrapper Start -->
+<div class="wrapper">
+	<div class="structure-row">
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+        	<div class="sidebar-in">
+                <!-- Sidebar Header Start -->
+                <header>
+                    <!-- Logo Start -->
+                    <div class="logo">
+                        <a href="dashboard1.html"><img src="{% static 'assets/images/logo.png'%}" alt="Adminise" /></a>
+                    </div>
+                    <!-- Logo End -->
+                    <!-- Toggle Button Start -->
+                    <a href="#" class="togglemenu">&nbsp;</a>
+                    <!-- Toggle Button End -->
+                    <div class="clearfix"></div>
+                </header>
+                <!-- Sidebar Header End -->
+                <!-- Sidebar Navigation Start -->
+                <nav class="navigation">
+                    <ul class="navi-acc" id="nav2">
+                        <li>
+                        <a href="dashboard" class="dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="upload_forms" class="forms">Upload Site Items</a>
+                        </li>
+                        
+                        <li>
+                            <a href="view_detail" class="ui-elements">View Uploaded Details</a>
+                        </li>
+
+                        <li>
+                            <a href="scan_upload" class="forms">Upload FaceScan Images</a>
+                        </li>
+
+                        <li>
+                            <a href="view_scan_images" class="ui-elements">View FaceScan Images</a>
+                        </li>
+                        
+                        <li>
+                            <a href="admin_gallery" class="layouts">Commertial Category</a>
+                        </li>
+                   
+                      
+                      
+                        <li>
+                            <a href="{% url 'logout' %}" class="loginoptions">Logout</a>
+                        </li>
+                     
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+                <!-- Sidebar Navigation End -->
+                <!-- Shadow Start -->
+                <span class="shadows"></span>
+                <!-- Shadow End -->
+            </div>
+        </aside>
+        <!-- Sidebar End -->
+        <!-- Right Section Start -->
+        <div class="right-sec">
+            <!-- Right Section Header Start -->
+            <header>
+                <!-- User Section Start -->
+                <div class="user">
+                    <figure>
+                        <a href="#"><img src="{% static 'assets/images/avatar1.jpg'%}" alt="Adminise" /></a>
+                    </figure>
+                    <div class="welcome">
+                        <p>Welcome</p>
+                        <h5><a href="#">Stephen N. Arellano</a></h5>
+                    </div>
+                </div>
+        
+                <nav class="topnav">
+                    <ul id="nav1">
+                        {% comment %} <li class="tasks">
+                        	<a href="#"><i class="glyphicon glyphicon-check"></i>Tasks<span>(04)</span></a>
+                         
+                        </li> {% endcomment %}
+                   
+                    </ul>
+                </nav>
+                <!-- Header Top Navigation End -->
+                <div class="clearfix"></div>
+            </header>
+            <!-- Right Section Header End -->
+            <!-- Content Section Start -->
+            {% if messages %}
+            <div class="container-liquid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="sec-box">
+                            <header>
+                                <h2 class="heading">Alert</h2>
+                            </header>
+                            <a class="closethis">Close</a>
+            
+                            <div class="contents boxpadding">
+                                <a class="togglethis">Toggle</a>
+                                <div class="alert alert-success">
+                                    {% for msg in messages %}
+                                    <strong>{{msg}}</strong>
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="content-section">
+                <div class="container-liquid">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <div class="stat-box colorone">
+                                <i class="author">&nbsp;</i>
+                                <h4>Users</h4>
+                                <h1>56</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="stat-box colortwo">
+                                <i class="chart">&nbsp;</i>
+                                <h4>Visits</h4>
+                                <h1>1288</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="stat-box colorthree">
+                                <i class="pages">&nbsp;</i>
+                                <h4>Pages</h4>
+                                <h1>125</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="stat-box colorfour">
+                                <i class="users">&nbsp;</i>
+                                <h4>New Users</h4>
+                                <h1>23</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="stat-box colorfive">
+                                <i class="downloads">&nbsp;</i>
+                                <h4>Downloads</h4>
+                                <h1>4005</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="stat-box colorsix">
+                                <i class="comments">&nbsp;</i>
+                                <h4>Comments</h4>
+                                <h1>56</h1>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Daily Visitors</h2>
+                                </header>
+                                <div class="contents boxpadding">
+                                    <a class="togglethis">Toggle</a>
+                                    <div class="charts-box">
+                                    	<script type="text/javascript" src="{% static 'assets/js/raphael-2.1.0.min.js'%}"></script>
+										<script type="text/javascript" src="{% static 'assets/js/morris-0.4.1.min.js'%}"></script>
+                                        <div id="displaydigonalbar"></div>
+                                        <script>
+                                            /* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
+                                            var day_data = [
+                                              {"period": "2012-10-01", "licensed": 3407, "sorned": 660},
+                                              {"period": "2012-09-30", "licensed": 3351, "sorned": 629},
+                                              {"period": "2012-09-29", "licensed": 3269, "sorned": 618},
+                                              {"period": "2012-09-20", "licensed": 3246, "sorned": 661},
+                                              {"period": "2012-09-19", "licensed": 3257, "sorned": 667},
+                                              {"period": "2012-09-18", "licensed": 3248, "sorned": 627},
+                                              {"period": "2012-09-17", "licensed": 3171, "sorned": 660},
+                                              {"period": "2012-09-16", "licensed": 3171, "sorned": 676},
+                                              {"period": "2012-09-15", "licensed": 3201, "sorned": 656},
+                                              {"period": "2012-09-10", "licensed": 3215, "sorned": 622}
+                                            ];
+                                            Morris.Bar({
+                                              element: 'displaydigonalbar',
+                                              data: day_data,
+                                              xkey: 'period',
+                                              ykeys: ['licensed', 'sorned'],
+                                              labels: ['Licensed', 'SORN'],
+                                              xLabelAngle: 60
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="sec-box">
+                                <a class="closethis">Close</a>
+                                <header>
+                                    <h2 class="heading">Updating data</h2>
+                                </header>
+                                <div class="contents boxpadding">
+                                    <a class="togglethis">Toggle</a>
+                                    <div class="charts-box">
+                                        <div id="updatingdata"></div>
+                                        <script>
+                                            var nReloads = 0;
+                                            function data(offset) {
+                                              var ret = [];
+                                              for (var x = 0; x <= 360; x += 10) {
+                                                var v = (offset + x) % 360;
+                                                ret.push({
+                                                  x: x,
+                                                  y: Math.sin(Math.PI * v / 180).toFixed(4),
+                                                  z: Math.cos(Math.PI * v / 180).toFixed(4)
+                                                });
+                                              }
+                                              return ret;
+                                            }
+                                            var graph = Morris.Line({
+                                                element: 'updatingdata',
+                                                data: data(0),
+                                                xkey: 'x',
+                                                ykeys: ['y', 'z'],
+                                                labels: ['sin()', 'cos()'],
+                                                parseTime: false,
+                                                ymin: -1.0,
+                                                ymax: 1.0,
+                                                hideHover: true
+                                            });
+                                            function update() {
+                                              nReloads++;
+                                              graph.setData(data(5 * nReloads));
+                                              $('#reloadStatus').text(nReloads + ' reloads');
+                                            }
+                                            setInterval(update, 100);
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                       
+                    
+                    </div>
+                    <!-- Row End -->
+                </div>
+            </div>
+            <!-- Content Section End -->
+        </div>
+        <!-- Right Section End -->
+    </div>
+</div>
+<!-- Wrapper End -->
+</body>
+
+<!-- Mirrored from extracoding.com/demo/html/adminise/dashboard1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Oct 2022 07:09:22 GMT -->
+</html>
